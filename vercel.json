@@ -13,7 +13,7 @@
         },
         {
             "src": "/routes",
-            "dest": "/allResults.js"
+            "dest": "/allResults"
         }
     ]
 }
