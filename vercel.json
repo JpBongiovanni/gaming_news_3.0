@@ -9,11 +9,7 @@
     "routes": [
         {
             "src": "/{.*}",
-            "dest": "/index.js"
-        },
-        {
-            "src":"/all",
-            "dest":"/routes/allResults.js"
+            "dest": "/"
         }
     ]
 }
