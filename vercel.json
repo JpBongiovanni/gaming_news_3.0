@@ -12,8 +12,8 @@
             "dest": "/"
         },
         {
-            "src": "/routes/*",
-            "dest": "/allResults"
+            "src": "/routes/(.*)",
+            "dest": "routes/allResults.js"
         }
     ]
 }
