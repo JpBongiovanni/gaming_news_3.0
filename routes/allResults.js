@@ -2,13 +2,10 @@
 const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
-
 const { get } = axios;
-const app = express();
+const router = express.Router();
 
-let router = express.Router();
 
-module.exports = router;
 
 
 const sources = [
@@ -115,3 +112,5 @@ sources.forEach(source => {
 router
     .route('/')
     .get((req, res) => {res.json(allArticles)})
+
+module.exports = router;

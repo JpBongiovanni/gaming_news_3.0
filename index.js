@@ -8,9 +8,9 @@ const app = express();
 const allResults = require("./routes/allResults");
 
 app.get('/', (req, res) => {
-    res.json('Welcome to my Gaming News API, go to /all to see the all news articles')
+    res.json('Welcome to my Gaming News API, go to /routes/all to see the all news articles')
 });
 
-app.use("/all", allResults);
+app.use("/routes/all", allResults);
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
