@@ -110,7 +110,6 @@ sources.forEach(source => {
 })
 
 router
-    .route('/')
-    .get((req, res) => {res.json(allArticles)})
+    .get("/", async (req, res) => {res.json(allArticles)})
 
 module.exports = router;
