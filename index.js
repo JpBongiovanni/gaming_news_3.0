@@ -11,6 +11,7 @@ const allResults = require("./routes/allResults");
 const mario = require("./routes/mario");
 const zelda = require("./routes/zelda");
 const metroid = require("./routes/metroid");
+const donkeyKong = require("./routes/donkeyKong");
 
 app.get('/', (req, res) => {
     res.json('Welcome to my Gaming News API, go to /routes/allResults to see the all news articles')
@@ -21,5 +22,6 @@ app.use("/allResults", allResults);
 app.use("/mario", mario);
 app.use("/zelda", zelda);
 app.use("/metroid", metroid);
+app.use("/donkeyKong", donkeyKong);
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
