@@ -12,7 +12,7 @@ const mario = require("./routes/mario");
 const zelda = require("./routes/zelda");
 const metroid = require("./routes/metroid");
 const donkeyKong = require("./routes/donkeyKong");
-// const starWars = require("./routes/starWars");
+const starWars = require("./routes/starWars");
 
 app.get('/', (req, res) => {
     res.json('Welcome to my Gaming News API, go to /routes/allResults to see the all news articles')
@@ -24,6 +24,6 @@ app.use("/mario", mario);
 app.use("/zelda", zelda);
 app.use("/metroid", metroid);
 app.use("/donkeyKong", donkeyKong);
-// app.use("/starWars", starWars);
+app.use("/starWars", starWars);
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
