@@ -1,9 +1,8 @@
 {
   "name": "gaming_news_3.0",
   "version": "1.0.0",
-  "description": "",
+  "description": "gaming_news_3.0",
   "main": "index.js",
-  
   "engines": {
     "node": "14.x"
   },
