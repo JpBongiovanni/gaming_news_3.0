@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
     res.json('Welcome to my Gaming News API, go to /routes/allResults to see the all news articles')
 });
 
-app.use("/routes/allResults", allResults);
+app.use("/allResults", allResults);
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
