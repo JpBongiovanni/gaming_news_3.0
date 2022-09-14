@@ -110,7 +110,8 @@ sources.forEach(source => {
 })
 
 router
-    .get("/", (req, res) => {res.json
-        (marioArticles)})
+    .get("/", (req, res) => {
+        res.json(marioArticles)
+    })
 
 module.exports = router
