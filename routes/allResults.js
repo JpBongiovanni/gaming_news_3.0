@@ -9,11 +9,11 @@ const router = express.Router();
 
 
 const sources = [
-    // {
-    //     name: "NintendoLife",
-    //     address: 'https://www.nintendolife.com/',
-    //     base: 'https://nintendolife.com/'
-    // },
+    {
+        name: "NintendoLife",
+        address: 'https://www.nintendolife.com/',
+        base: 'https://nintendolife.com/'
+    },
     {
         name: "NintendoNews",
         address: 'https://nintendonews.com/',
@@ -111,12 +111,7 @@ sources.forEach(source => {
 
 router
     .get("/", async (req, res) => {
-        try{
-            res.json(allArticles)
-        } catch(e) {
-            res.status(500).json({message: e.message})
-        }
-        
+        res.json(allArticles)
     })
 
 module.exports = router;
