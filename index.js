@@ -7,7 +7,7 @@ const app = express();
 
 //route constants
 const allResults = require("./routes/allResults");
-// const mario = require("./routes/mario");
+const mario = require("./routes/mario");
 // const zelda = require("./routes/zelda");
 // const metroid = require("./routes/metroid");
 // const donkeyKong = require("./routes/donkeyKong");
@@ -24,7 +24,7 @@ app.get('/', async (req, res) => {
 // routes URL
 
 app.use("/allResults", allResults);
-// app.use("/mario", mario);
+app.use("/mario", mario);
 // app.use("/zelda", zelda);
 // app.use("/metroid", metroid);
 // app.use("/donkeyKong", donkeyKong);
