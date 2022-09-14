@@ -14,14 +14,9 @@ const metroid = require("./routes/metroid");
 const donkeyKong = require("./routes/donkeyKong");
 const starWars = require("./routes/starWars");
 
-app.get('/', (req, res) => {
-    try{
+app.get('/', async (req, res) => {
         res.json('Welcome to my Gaming News API, go to /routes/allResults to see the all news articles')
-    } catch(e) {
-        res.status(500).json({message: e.message})
-    }
-    
-});
+})
 
 //routes URL
 app.use("/allResults", allResults);
