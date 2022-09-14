@@ -15,10 +15,15 @@ const donkeyKong = require("./routes/donkeyKong");
 const starWars = require("./routes/starWars");
 
 app.get('/', (req, res) => {
+    try {
         res.json('Welcome to my Gaming News API, go to /routes/allResults to see the all news articles')
+    } catch (err) {
+        res.json('Something went wrong:' + err)
+    }
 })
 
-//routes URL
+// routes URL
+
 // app.use("/allResults", allResults);
 // app.use("/mario", mario);
 // app.use("/zelda", zelda);
