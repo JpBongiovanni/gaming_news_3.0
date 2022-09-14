@@ -2,12 +2,12 @@ const sources = [
     {
         name: "NintendoLife",
         address: 'https://www.nintendolife.com/',
-        base: 'https://nintendolife.com/'
+        base: ''
     },
     {
         name: "NintendoNews",
         address: 'https://nintendonews.com/',
-        base: 'https://nintendonews.com/'
+        base: ''
     },
     {
         name: "MyNintendoNews",
@@ -27,7 +27,7 @@ const sources = [
     {
         name: "GameRant",
         address: "https://gamerant.com/",
-        base: 'https://gamerant.com/'
+        base: ''
     },
     {
         name: "NintendoEverything",
@@ -37,12 +37,12 @@ const sources = [
     {
         name: "Polygon",
         address: "https://www.polygon.com/",
-        base: 'https://www.polygon.com'
+        base: ''
     },
     {
         name: "Gamespot",
         address: "https://www.gamespot.com/",
-        base: 'https://www.gamespot.com'
+        base: ''
     },
     {
         name: "GeeksAndGamers",
@@ -52,7 +52,7 @@ const sources = [
     {
         name: "ign",
         address: "https://www.ign.com/",
-        base: 'https://www.ign.com'
+        base: ''
     },
     {
         name: "gamesradar",
