@@ -108,7 +108,7 @@ sources.forEach(source => {
 })
 
 router  
-    .get("/", async (req, res) => {res.json
+    .get("/", (req, res) => {res.json
         (zeldaArticles)})
 
 module.exports = router

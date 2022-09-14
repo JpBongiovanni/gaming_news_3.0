@@ -110,7 +110,7 @@ sources.forEach(source => {
 })
 
 router
-    .get("/", async (req, res) => {
+    .get("/", (req, res) => {
         res.json(allArticles)
     })
 

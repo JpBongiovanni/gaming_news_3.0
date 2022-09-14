@@ -111,7 +111,7 @@ sources.forEach(source => {
 
 
 router
-    .get("/", async (req, res) => {res.json
+    .get("/", (req, res) => {res.json
         (starWarsArticles)})
 
 module.exports = router
