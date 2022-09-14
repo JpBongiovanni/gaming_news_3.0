@@ -9,7 +9,7 @@ const app = express();
 const allResults = require("./routes/allResults");
 const mario = require("./routes/mario");
 const zelda = require("./routes/zelda");
-// const metroid = require("./routes/metroid");
+const metroid = require("./routes/metroid");
 // const donkeyKong = require("./routes/donkeyKong");
 // const starWars = require("./routes/starWars");
 
@@ -26,7 +26,7 @@ app.get('/', async (req, res) => {
 app.use("/allResults", allResults);
 app.use("/mario", mario);
 app.use("/zelda", zelda);
-// app.use("/metroid", metroid);
+app.use("/metroid", metroid);
 // app.use("/donkeyKong", donkeyKong);
 // app.use("/starWars", starWars);
 
