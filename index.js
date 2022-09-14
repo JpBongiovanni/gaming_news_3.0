@@ -24,11 +24,11 @@ app.get('/', (req, res) => {
 
 // routes URL
 
-// app.use("/allResults", allResults);
-// app.use("/mario", mario);
-// app.use("/zelda", zelda);
-// app.use("/metroid", metroid);
-// app.use("/donkeyKong", donkeyKong);
-// app.use("/starWars", starWars);
+app.use("/allResults", allResults);
+app.use("/mario", mario);
+app.use("/zelda", zelda);
+app.use("/metroid", metroid);
+app.use("/donkeyKong", donkeyKong);
+app.use("/starWars", starWars);
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
