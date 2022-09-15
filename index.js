@@ -15,7 +15,7 @@ app.get('/', async (req, res) => {
         res.json('Welcome to my Gaming News API, go to /allResults to see the all news articles')
     } catch (err) {
         res.json('Something went wrong:' + err)
-        throw new Error(err);
+
     }
 })
 

@@ -17,7 +17,7 @@ router
             res.json(allArticles)
         } catch (err) {
             res.json('Something went wrong: ' + err)
-            throw new Error(err)
+            
         }
         
     })

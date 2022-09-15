@@ -8,7 +8,7 @@ const getJson = require('../functions');
 
 const zeldaArticles = [];
 
-getJson(sources, 'a:contains("Zelda"), a:contains("Ocarina of Time', zeldaArticles);
+getJson(sources, 'a:contains("Zelda"), a:contains("Ocarina of Time")', zeldaArticles);
 
 router
     .get("/", (req, res) => {
@@ -16,7 +16,7 @@ router
             res.json(zeldaArticles)
         } catch (err) {
             res.json('Something went wrong: ' + err)
-            throw new Error(err)
+            
         }
         
     })

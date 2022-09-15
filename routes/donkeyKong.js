@@ -16,7 +16,6 @@ router
             res.json(donkeyKongArticles)
         } catch (err) {
             res.json('Something went wrong: ' + err)
-            throw new Error(err)
         }
         
     })
