@@ -1,40 +1,24 @@
 "use strict";
 const express = require('express');
-const axios = require('axios');
-const cheerio = require('cheerio');
-
-const { get } = axios;
 const router = express.Router();
 
-
+//imports
 const sources = require('../sources');
+const getJson = require('../functions');
 
 const metroidArticles = [];
 
-//metroid articles
-sources.forEach(source => {
-    get(source.address)
-        .then(response => {
-            const html = response.data
-            const $ = cheerio.load(html)
-            
-            $('a:contains("Metroid"), a:contains("Samus")', html).each(function (){
-                const text = $(this).text().trim();
-                const url = $(this).attr('href');
-                
-                metroidArticles.push({
-                    text,
-                    url: source.base + url,
-                    source: source.name,
-                    publication: source.address
-                })
-            })
-        })
-})
+getJson(sources, 'a:contains("Metroid"), a:contains("Samus")', metroidArticles);
 
-router  
+router
     .get("/", (req, res) => {
-        res.json(metroidArticles)
+        try{
+            res.json(metroidArticles)
+        } catch (err) {
+            res.json('Something went wrong: ' + err)
+            throw new Error(err)
+        }
+        
     })
 
 module.exports = router

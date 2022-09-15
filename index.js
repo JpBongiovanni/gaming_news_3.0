@@ -1,8 +1,5 @@
 const PORT = process.env.PORT || 8000;
 const express = require('express');
-const axios = require('axios');
-const cheerio = ('cheerio');
-const { get } = axios;
 const app = express();
 
 //route constants
@@ -12,10 +9,10 @@ const zelda = require("./routes/zelda");
 const metroid = require("./routes/metroid");
 const donkeyKong = require("./routes/donkeyKong");
 
-
+//Home Page
 app.get('/', async (req, res) => {
     try {
-        res.json('Welcome to my Gaming News API, go to /routes/allResults to see the all news articles')
+        res.json('Welcome to my Gaming News API, go to /allResults to see the all news articles')
     } catch (err) {
         res.json('Something went wrong:' + err)
         throw new Error(err);
@@ -23,7 +20,6 @@ app.get('/', async (req, res) => {
 })
 
 // routes URL
-
 app.use("/allResults", allResults);
 app.use("/mario", mario);
 app.use("/zelda", zelda);

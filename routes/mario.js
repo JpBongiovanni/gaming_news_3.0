@@ -1,41 +1,25 @@
 "use strict";
 const express = require('express');
-const axios = require('axios');
-const cheerio = require('cheerio');
-const { get } = axios;
 const router = express.Router();
 
-
+//sources
 const sources = require('../sources');
-
+//scraper function
+const getJson = require('../functions');
+//empty article array
 const marioArticles = [];
 
-//mario articles
-sources.forEach(source => {
-    get(source.address)
-        .then(response => {
-            const html = response.data
-            const $ = cheerio.load(html)
-            
-            $('a:contains("Mario"), a:contains("Super Mario")', html).each(function (){
-                const text = $(this).text().trim();
-                const url = $(this).attr('href');
-                
-                marioArticles.push({
-                    text,
-                    url: source.base + url,
-                    source: source.name,
-                    publication: source.address
-                })
-            })
-
-
-        })
-})
+getJson(sources, 'a:contains("Mario"), a:contains("Super Mario")', marioArticles);
 
 router
     .get("/", (req, res) => {
-        res.json(marioArticles)
+        try{
+            res.json(marioArticles)
+        } catch (err) {
+            res.json('Something went wrong: ' + err)
+            throw new Error(err)
+        }
+        
     })
 
 module.exports = router
