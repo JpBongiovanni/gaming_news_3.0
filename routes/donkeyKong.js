@@ -34,7 +34,13 @@ sources.forEach(source => {
 })
 
 router
-    .get("/", (req, res) => {res.json
-        (donkeyKongArticles)})
+    .get("/", (req, res) => {
+        try{
+            res.json(donkeyKongArticles)
+        } catch (err) {
+            res.json('Something went wrong: ' + err)
+        }
+        
+    })
 
 module.exports = router
