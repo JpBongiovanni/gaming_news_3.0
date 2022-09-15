@@ -28,3 +28,9 @@ app.use("/donkeyKong", donkeyKong);
 
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
+
+// Handle Unhandled Promise Rejections
+process.on('unhandledRejection', err => {
+    console.log(`ERROR: ${err.message}`);
+    console.log("Rejection Detected");
+})
