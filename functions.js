@@ -3,9 +3,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const { get } = axios;
 
-
-console.log("hello")
-
 function getJson(sources, searchString, articles){
     try{
         sources.forEach(source => {
