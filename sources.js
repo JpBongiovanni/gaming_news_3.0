@@ -69,11 +69,6 @@ const sources = [
         address: "https://www.neoseeker.com/",
         base: ''
     },
-    {
-        name: "giantbomb",
-        address: "https://www.giantbomb.com/",
-        base: ''
-    },
 ]
 
 module.exports = sources;
