@@ -8,6 +8,11 @@ const mario = require("./routes/mario");
 const zelda = require("./routes/zelda");
 const metroid = require("./routes/metroid");
 const donkeyKong = require("./routes/donkeyKong");
+const kirby = require("./routes/kirby");
+const halo = require("./routes/halo");
+const finalFantasy = require("./routes/finalfantasy");
+const WoW = require('./routes/wow');
+const starFox = require('./routes/starFox');
 
 //Home Page
 app.get('/', async (req, res) => {
@@ -25,6 +30,11 @@ app.use("/mario", mario);
 app.use("/zelda", zelda);
 app.use("/metroid", metroid);
 app.use("/donkeyKong", donkeyKong);
+app.use("/kirby", kirby);
+app.use("/halo", halo);
+app.use("/finalFantasy", finalFantasy);
+app.use("/wow", WoW);
+app.use("/starFox", starFox);
 
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
