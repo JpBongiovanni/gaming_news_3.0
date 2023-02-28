@@ -2,7 +2,7 @@ const PORT = process.env.PORT || 8000;
 const express = require('express');
 const app = express();
 
-//route constants
+//route constants more to add
 const allResults = require("./routes/allResults");
 const mario = require("./routes/mario");
 const zelda = require("./routes/zelda");
